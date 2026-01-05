@@ -388,6 +388,12 @@ body {
     line-height: 1.8;
 }
 
+.certs {
+    color: var(--accent-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
 /* Timeline */
 .timeline {
     position: relative;
