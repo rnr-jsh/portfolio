@@ -85,42 +85,42 @@ const portfolioData = {
             title: "Kontak",
             description: "A tool for managing contacts in one place. This help organizing your personal and organizational/shared contacts.",
             technologies: ["Laravel", "Node.js", "MySQL", "PHP", "AWS"],
-            image: "/../assets/kontak.png",
+            image: "../assets/kontak.png",
             github: "https://github.com/MachiBytes/kontak"
         },
         {
             title: "Marvel Quiz",
             description: "A mini quiz game built with HTML, CSS, and Javascript. This feature a unique quiz game that enforces a point-ranking system.",
             technologies: ["HTML", "CSS", "Javascript"],
-            image: "/../assets/marvel_quiz.png",
+            image: "../assets/marvel_quiz.png",
             github: "https://github.com/MachiBytes/marvel-quiz.git"
         },
         {
             title: "Luminous Wisdom",
             description: "A mini project of mine that display the random function and frontend framework 'Tkinter' of Python.",
             technologies: ["Python", "Tkinter"],
-            image: "/../assets/luminous_wisdom.png",
+            image: "../assets/luminous_wisdom.png",
             github: "https://github.com/rnr-jsh/Projects/tree/main/Quote_Generator"
         },
         {
             title: "POMO",
             description: "A responsive time management that provides productivity and time management with beautiful visualizations, which was built through collaboration.",
             technologies: ["XAML", "C#"],
-            image: "/../assets/POMO.jpg",
+            image: "../assets/POMO.jpg",
             github: "https://github.com/rnr-jsh/POMO.git"
         },
         {
             title: "Shibachi",
             description: "A collaborative game project. This feature basic animation and illustration. This project was done with the thought of providing relaxation.",
             technologies: ["Godot Engine", "GDScript"],
-            image: "/../assets/shibachi.png",
+            image: "../assets/shibachi.png",
             github: "https://github.com/arreyceferino/Shibachi"
         },
         {
             title: "4PH Pag-Ibig Housing Loan",
             description: "A group project that features information management. An application form transform into digital form to handle experience first-hand database management.",
             technologies: [".NET","C#", "MySQL"],
-            image: "/../assets/4ph.png",
+            image: "../assets/4ph.png",
             github: "https://github.com/reluwi/4PH_PAGIBIG_HOUSING.git"
         }
     ],
