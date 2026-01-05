@@ -1,7 +1,3 @@
-// ========================================
-// DATA CONFIGURATION - Edit this section to customize your portfolio
-// ========================================
-
 const portfolioData = {
     // Typing animation texts for home section
     typingTexts: [
@@ -167,10 +163,6 @@ const portfolioData = {
         }
     ]
 };
-
-// ========================================
-// APPLICATION CODE - No need to edit below unless customizing functionality
-// ========================================
 
 // Theme Toggle
 const themeToggle = document.querySelector('.theme-toggle');
