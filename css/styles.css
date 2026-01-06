@@ -10,9 +10,9 @@
     --border-color: #d4d9c8;
     --shadow-light: rgba(74, 124, 89, 0.1);
     --shadow-dark: rgba(45, 62, 46, 0.15);
-    --watercolor-1: rgba(107, 142, 78, 0.3);
-    --watercolor-2: rgba(143, 167, 106, 0.2);
-    --watercolor-3: rgba(74, 124, 89, 0.3);
+    --watercolor-1: rgba(120, 168, 81, 0.3);
+    --watercolor-2: rgba(179, 209, 135, 0.2);
+    --watercolor-3: rgba(81, 179, 110, 0.3);
 }
 
 [data-theme="dark"] {
@@ -522,21 +522,23 @@ body {
 }
 
 /* Projects Section */
-/* Projects Section */
 .projects-carousel {
     position: relative;
     overflow: hidden;
     padding: 0 60px;
+    width: 100%;
 }
 
 .projects-wrapper {
     overflow: hidden;
+    width: 100%;
 }
 
 .projects-grid {
     display: flex;
     transition: transform 0.5s ease;
     gap: 2rem;
+    width: 100%;
 }
 
 .project-card {
@@ -815,8 +817,13 @@ body {
         font-size: 1.3rem;
     }
 
+    #projects .container {
+        max-width: 27rem;
+    }
+
     .projects-carousel {
-        padding: 0;
+        width: 100%;
+        padding: 0 50px;
     }
     
     .project-card {
@@ -826,10 +833,24 @@ body {
     
     .projects-grid {
         margin: 0;
+        gap: 1.5rem;
     }
     
     .carousel-btn {
-        display: none;
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .prev-btn {
+        left: 5px;
+    }
+    
+    .next-btn {
+        right: 5px;
     }
 
     .timeline {

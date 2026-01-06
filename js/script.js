@@ -327,32 +327,53 @@ const totalProjects = portfolioData.projects.length;
 function updateCarousel() {
     const container = document.getElementById('projects-container');
     const carousel = document.querySelector('.projects-carousel');
-    const carouselWidth = carousel.offsetWidth - 120; // Subtract padding
-    const gap = 32; // 2rem gap
-    const cardWidth = (carouselWidth - (2 * gap)) / 3; // 3 cards visible
     
-    // Calculate offset with looping
-    const offset = currentProjectIndex * (cardWidth + gap);
-    container.style.transform = `translateX(-${offset}px)`;
+    // Check if mobile
+    const isMobile = window.innerWidth <= 968;
+    
+    if (isMobile) {
+        // Mobile: show 1 card at a time, full width
+        const cardWidth = carousel.offsetWidth;
+        const gap = 54.5;
+        const offset = currentProjectIndex * (2*(cardWidth/3) + gap);
+        container.style.transform = `translateX(-${offset}px)`;
+    } else {
+        // Desktop: show 3 cards at a time
+        const carouselWidth = carousel.offsetWidth - 120; // Subtract padding
+        const gap = 32; // 2rem gap
+        const cardWidth = (carouselWidth - (2 * gap)) / 3;
+        const offset = currentProjectIndex * (cardWidth + gap);
+        container.style.transform = `translateX(-${offset}px)`;
+    }
 }
 
 document.querySelector('.prev-btn').addEventListener('click', () => {
+    const isMobile = window.innerWidth <= 968;
+    
     currentProjectIndex--;
     
     // Loop to end if at beginning
     if (currentProjectIndex < 0) {
-        currentProjectIndex = totalProjects - 3;
+        currentProjectIndex = isMobile ? totalProjects - 1 : totalProjects - 3;
     }
     
     updateCarousel();
 });
 
 document.querySelector('.next-btn').addEventListener('click', () => {
+    const isMobile = window.innerWidth <= 968;
+    
     currentProjectIndex++;
     
     // Loop to beginning if at end
-    if (currentProjectIndex >= totalProjects - 2) {
-        currentProjectIndex = 0;
+    if (isMobile) {
+        if (currentProjectIndex >= totalProjects) {
+            currentProjectIndex = 0;
+        }
+    } else {
+        if (currentProjectIndex >= totalProjects - 2) {
+            currentProjectIndex = 0;
+        }
     }
     
     updateCarousel();
@@ -360,6 +381,8 @@ document.querySelector('.next-btn').addEventListener('click', () => {
 
 // Handle window resize for carousel
 window.addEventListener('resize', () => {
+    // Reset to first position on resize to avoid issues
+    currentProjectIndex = 0;
     updateCarousel();
 });
 
