@@ -767,7 +767,6 @@ body {
 /* Responsive Design */
 @media (max-width: 968px) {
     .navbar .container {
-        
         justify-content: space-between;
     }
     
