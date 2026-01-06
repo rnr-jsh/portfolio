@@ -766,6 +766,17 @@ body {
 
 /* Responsive Design */
 @media (max-width: 968px) {
+    .navbar .container {
+        
+        justify-content: space-between;
+    }
+    
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     .nav-links {
         position: fixed;
         left: -100%;
@@ -785,6 +796,7 @@ body {
 
     .mobile-toggle {
         display: flex;
+        order: -1;
     }
 
     .mobile-toggle.active span:nth-child(1) {
